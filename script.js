@@ -152,8 +152,8 @@ const gameData = {
         dialogue: "Nós precisamos recuperar o controle! Precisamos de um mensageiro seguro e livre, não de um que prioriza a conveniência em detrimento da privacidade.",
         character: 'pe',
         options: [
-            { text: "1. Ajudar Pidinho (Recuperar Liberdade 0)", next: 'level3_choice1_win' },
-            { text: "2. Apressar-se (Deixar Liberdade 0 oculta)", next: 'level3_choice2_fail' }
+            { text: "1. Ajudar Pidinho", next: 'level3_choice1_win' },
+            { text: "2. Apressar-se", next: 'level3_choice2_fail' }
         ]
     },
 
@@ -192,7 +192,7 @@ const gameData = {
         narrator: "Pe e Tux se despedem de Pidinho e continuam seguindo o caminho. O ar fica mais tenso.",
         dialogue: "Muito obrigado por ajudar o Pidinho, Pe! Ele agora está bem melhor.",
         character: 'tux',
-        options: [{ text: "Perguntar sobre o nome 'Pe'", next: 'level4_name_reveal' }]
+        options: [{ text: "Continuar a busca'", next: 'level4_name_reveal' }]
     },
     'level4_name_reveal': {
         narrator: null,
@@ -321,8 +321,8 @@ const gameData = {
         dialogue: "Para fazer negócios, é claro! Informação vale ouro, minha cara! Você entrega um pouquinho de si, e em troca ganha praticidade. O que vale mais? Um ideal abstrato ou a vida fácil?",
         character: 'sapo',
         options: [
-            { text: "Aceitar a Poção da Conveniência (Perde)", next: 'level5_choice_accept' }, // Caminho da Perda
-            { text: "Rejeitar a Poção da Conveniência (Continua)", next: 'level5_choice_reject' } // Caminho Correto
+            { text: "Aceitar a Poção da Conveniência", next: 'level5_choice_accept' }, // Caminho da Perda
+            { text: "Rejeitar a Poção da Conveniência", next: 'level5_choice_reject' } // Caminho Correto
         ]
     },
 
@@ -339,7 +339,7 @@ const gameData = {
         character: null,
         gameOver: true, // Usa o painel reflexivo de Game Over
         gameOverText: "**FALHA!** Pateta! Acha mesmo que eu lavo dinheiro com água? Eu lavo é com os seus dados! A.M.A.L.G.A. vai amar isso! Você reforçou o poder da IA, perdeu a confiança e terá que recomeçar o nível.",
-        options: [{ text: "Tentar novamente (Recomeçar Nível 5)", next: 'level5_start' }] // Reinicia o Nível 5
+        options: [{ text: "Tentar novamente", next: 'level5_start' }] // Reinicia o Nível 5
     },
 
     // --- RAMIFICAÇÃO: REJEITAR (SUCESSO) ---
@@ -359,7 +359,7 @@ const gameData = {
         narrator: "O Sapo desaparece na névoa, soltando uma gargalhada rouca. Pe sente um arrepio e percebe que sua recusa teve um custo. O caminho para recuperar as liberdades será mais desafiador, mas ela manteve sua integridade.",
         dialogue: "Eu fiz a escolha certa. Mas preciso encontrar o caminho para a Wikipedia.",
         character: 'pe',
-        options: [{ text: "Continuar no Beco Digital (Nível 6)", next: 'level6_start' }]
+        options: [{ text: "Continuar no Beco Digital", next: 'level6_start' }]
     },
     // --- NÍVEL 6: PE ENCONTRA UMA MENINA SEM NOME ---
     'level6_start': {
@@ -432,7 +432,7 @@ const gameData = {
         narrator: "Juntas, elas dão o primeiro passo rumo ao portal cintilante da Wikipédia.",
         dialogue: "Tá.",
         character: 'girl',
-        options: [{ text: "Entrar na Wikipedia (Nível 7)", next: 'level7_start' }]
+        options: [{ text: "Entrar na Wikipedia", next: 'level7_start' }]
     },
     // --- NÍVEL 7: O LABIRINTO DA WIKIPÉDIA ---
     'level7_start': {
@@ -545,8 +545,8 @@ const gameData = {
         dialogue: "Ele quer tirar nossa terra de novo! Entregar o trabalho para ele é entregar nossa autonomia! Nossa soberania digital está em risco. Você precisa intervir, Pe. O que faremos?",
         character: 'girl',
         options: [
-            { text: "1. Desmascarar o Sapo publicamente", next: 'level8_choice_expose' },
-            { text: "2. Procurar uma falha no 'iVaultik'", next: 'level8_choice_flaw' }
+            { text: "Desmascarar o Sapo publicamente", next: 'level8_choice_expose' },
+            { text: "Procurar uma falha no 'iVaultik'", next: 'level8_choice_flaw' }
         ]
     },
 
@@ -556,7 +556,9 @@ const gameData = {
         narrator: "Pe decide interromper o Sapo, focando na ética de privacidade e soberania. Isso é um confronto direto que pode atrair a atenção da A.M.A.L.G.A.",
         dialogue: null,
         character: 'pe',
-        options: [] // Próximo diálogo/ação do confronto
+        options: [
+            { text: "ALTERAR", next: 'level9_start'}
+        ] // Próximo diálogo/ação do confronto
     },
     // --- NÍVEL 9: O ATAQUE AO COLABORATIVISMO ---
     'level9_start': {
