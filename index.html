@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>As Quatro Liberdades - Uma Aventura Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <div id="narrator-box" class="panel"></div>
+
+        <div id="character-container">
+            <img id="character-img" src="assets/tux_default.png" alt="Personagem" class="hidden">
+            
+            <div id="dialog-box" class="speech-bubble hidden">
+                <p id="dialog-text"></p>
+            </div>
+        </div>
+
+        <div id="options-container">
+            </div>
+        
+        <div id="game-over-panel" class="panel game-over hidden">
+            <h2 class="marker-font">FIM DE JOGO</h2>
+            <p id="game-over-text"></p>
+            <button onclick="restartGame()" class="marker-font">Tentar Novamente</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
