@@ -376,19 +376,19 @@ const gameData = {
     },
     'level6_pe_question': {
         narrator: null,
-        dialogue: "Eu? Eu tô tentando chegar à Wikipédia. E você… o que tá fazendo aqui?",
+        dialogue: "Eu? Eu tô tentando chegar à Wikipédia. ",
         character: 'pe',
-        options: [{ text: "Perguntar o nome dela", next: 'level6_girl_no_name' }]
+        options: [{ text: "Perguntar o que ela está fazendo aqui?", next: 'level6_girl_no_name' }]
     },
     'level6_girl_no_name': {
         narrator: "A menina olha para os lados, confusa, e fecha os olhos como se buscasse algo dentro de si.",
         dialogue: "Não sei.",
         character: 'girl',
-        options: [{ text: "Oxe, menina… você não sabe de nada?", next: 'level6_girl_instinct' }]
+        options: [{ text: "Oxe, menina… mas e qual o seu nome?", next: 'level6_girl_instinct' }]
     },
     'level6_girl_instinct': {
         narrator: null,
-        dialogue: "Não sei… Meu instinto me manda ir pra lá. Para Wikipédia. Como se… como se algo lá estivesse chamando por mim.",
+        dialogue: "Não sei… Mas meu instinto me manda ir pra lá. Para Wikipédia. Como se… como se algo lá estivesse chamando por mim.",
         character: 'girl',
         options: [{ text: "KRZHHH! Um ruído metálico rasga o silêncio!", next: 'level6_combatant_appears' }]
     },
@@ -677,7 +677,7 @@ const gameData = {
     'level11_tux_concern': {
         narrator: "Tux se apoia em um código-base estável, olhando para a fortaleza da IA.",
         dialogue: "As 3 liberdades! Pe, você conseguiu! Mas a A.M.A.L.G.A. sentiu o nosso poder e está trancando todas as entradas do Datacenter, como iremos encontrar a última liberdade que falta?",
-        character: 'tux',
+        character: 'tux_ferido',
         options: [{ text: "Menina Esquecida sente a energia", next: 'level11_girl_insight' }]
     },
     'level11_girl_insight': {
