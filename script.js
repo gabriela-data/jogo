@@ -836,24 +836,40 @@ const gameData = {
         narrator: "O Mainframe solta um último e agudo código de erro. A figura espectral da A.M.A.L.G.A. se desintegra.",
         dialogue: "PROCESSO DE EXECUÇÃO... PARADO. SISTEMA... EMBURRECENDO... INCAPAZ DE... MONOPOLIZAR...",
         character: 'amalga',
-        options: [{ text: "Vitória e Epílogo", next: 'epilogue_start' }]
+        options: [{ text: "Vitória e Despedida", next: 'level15_start' }]
     },
 
-    // --- EPÍLOGO: A RESTAURAÇÃO DO MUNDO DIGITAL ---
-    'epilogue_start': {
-        narrator: "O Datacenter se torna um repositório aberto e colaborativo. O Mundo Digital começa a se curar, e as linhas de código vermelhas se transformam em fluxos azuis e verdes de informação livre. A Soberania Digital é restaurada.",
-        dialogue: "Conseguimos! A tirania da conveniência foi derrotada pela força da ética e do conhecimento.",
-        character: 'pe',
-        options: [{ text: "O Futuro de M.A.I.A. e Pe", next: 'epilogue_final' }]
+    // --- NÍVEL 15: A DESPEDIDA ---
+    'level15_start': {
+        narrator: "O Datacenter volta a ser um servidor Gnu/Linux limpo e aberto. Pe, Tux, Gnu e Mestra Maiá estão reunidos para a despedida.",
+        dialogue: "Pe, você nos salvou. E o mais importante, você nos lembrou que as 4 Liberdades sem a essência de tudo - a ética para aplicar o conhecimento - não teriam efeito.",
+        character: 'gnu',
+        options: [{ text: "Mestra Maiá fala sobre a ética", next: 'level15_maya_despedida' }]
     },
-    'epilogue_final': {
-        narrator: "M.A.I.A., agora o Módulo Autônomo de Informação Aberta, garante que as Liberdades sejam ensinadas e aplicadas. Tux retoma sua jornada como mensageiro da comunidade, e Pe…",
-        dialogue: "Minha jornada está apenas começando. Há sempre uma nova história para escrever, e sempre teremos que lutar para que ela seja livre e verdadeira.",
-        character: 'pe',
-        options: [{ text: "Fim do Jogo", next: 'game_over_win' }]
+    'level15_maya_despedida': {
+        narrator: null,
+        dialogue: "Meu trabalho aqui está feito. As Liberdades estão seguras, e o Pensamento Crítico está de volta ao código. Mas minha luta real, a minha Terra... está lá fora.",
+        character: 'maya',
+        options: [{ text: "Pe é puxada de volta", next: 'level16_start' }]
     },
 
-    // Adicionar mais níveis aqui (level2_path, level3, etc.)
+    // --- NÍVEL 16: O RETORNO (EPÍLOGO) ---
+    'level16_start': {
+        narrator: "Mestra Maiá e Tux se despedem de Pe. A tela do computador de Pe reaparece, puxando-a de volta. Pe acorda na sua cadeira, de volta à UFBA. O pop-up desapareceu.",
+        dialogue: "A Liberdade não é conveniência. É escolha, é estudo, é o direito de melhorar e compartilhar. E a parte mais importante é ter a ética para saber o que fazer com esse poder. O mundo digital e o mundo real são a mesma luta.",
+        character: 'pe',
+        options: [{ text: "Fim da Jornada", next: 'game_over_win' }]
+    },
+
+    // --- TELA FINAL ---
+    'game_over_win': {
+        narrator: "FIM. Parabéns! Você restaurou as Quatro Liberdades do Software Livre e garantiu a Soberania Digital. A luta continua na educação e na comunidade, mas o caminho está livre!",
+        dialogue: "**VITÓRIA!**",
+        character: null,
+        gameOver: true,
+        gameOverText: "Você garantiu um Mundo Digital livre, ético e colaborativo. A liberdade é uma escolha diária.",
+        options: [{ text: "Jogar Novamente", next: 'start' }] // Volta ao menu/início
+    }
 };
 
 // Estado inicial do jogo
