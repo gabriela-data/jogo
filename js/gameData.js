@@ -1,14 +1,5 @@
-// Variáveis do DOM (Document Object Model)
-const narratorBox = document.getElementById('narrator-box');
-const characterImg = document.getElementById('character-img');
-const dialogBox = document.getElementById('dialog-box');
-const dialogText = document.getElementById('dialog-text');
-const optionsContainer = document.getElementById('options-container');
-const gameOverPanel = document.getElementById('game-over-panel');
-const gameOverText = document.getElementById('game-over-text');
-
-// Estrutura do Jogo (Nível 1)
-const gameData = {
+// Dados do jogo: estados, diálogos e estrutura narrativa
+export const gameData = {
     'start': {
         narrator: "A Pe navega tranquilamente pela internet em sua estação de trabalho, quando, de repente, um link suspeito (que ela jura nunca ter clicado) a suga para dentro do computador!",
         dialogue: null,
@@ -156,16 +147,12 @@ const gameData = {
             { text: "2. Apressar-se", next: 'level3_choice2_fail' }
         ]
     },
-
-    // --- CAMINHO 1: AJUDAR PIDINHO (SUCESSO) ---
     'level3_choice1_win': {
         narrator: "O jogador escolhe ajudar Pidinho. Juntos, ensinam-no a usar senhas fortes, a não compartilhar informações sensíveis e a construir um ninho digital mais seguro, no topo de uma árvore. Pidinho, agora mais responsável, se junta à causa.",
         dialogue: "A Liberdade 0 (Liberdade de executar o programa como você desejar) estava oculta no ninho de Pidinho, sendo usada para fins que ele não desejava. Você a recuperou! A A.M.A.L.G.A. perdeu um ponto de vigilância. **Liberdade 0 Recuperada!**",
         character: 'pidgin',
         options: [{ text: "Continuar a aventura...", next: 'level4_start' }]
     },
-
-    // --- CAMINHO 2: APRESSAR-SE (FRACASSO PARCIAL) ---
     'level3_choice2_fail': {
         narrator: null,
         dialogue: null,
@@ -180,14 +167,12 @@ const gameData = {
         gameOverText: "Pe, a pressa é uma armadilha. Ao ignorar o perigo que o Pidinho corre, você não só o abandona, como também permite que a A.M.A.L.G.A. fique mais forte. Ignorando a segurança e a privacidade, você está dando à IA mais poder sobre todos. A liberdade só existe quando todos são responsáveis.",
         options: [{ text: "Aceitar a perda e seguir em frente", next: 'level4_start_no_freedom' }] // Opção de continuar o jogo
     },
-    // Este estado é necessário para lidar com o botão "Aceitar a perda" no painel reflexivo
     'level4_start_no_freedom': {
         narrator: "Você seguiu em frente, deixando Pidinho e a Liberdade 0 para trás. A jornada continua, mas a A.M.A.L.G.A. ganhou uma pequena vantagem...",
         dialogue: "Nossa próxima parada é o Lago de Dados Obscuros. Vamos, Pe!",
         character: 'tux',
         options: [{ text: "Ir para o Nível 4", next: 'level4_start' }]
     },
-    // --- NÍVEL 4: A SEPARAÇÃO ---
     'level4_start': {
         narrator: "Pe e Tux se despedem de Pidinho e continuam seguindo o caminho. O ar fica mais tenso.",
         dialogue: "Muito obrigado por ajudar o Pidinho, Pe! Ele agora está bem melhor.",
@@ -242,8 +227,6 @@ const gameData = {
         character: 'tux',
         options: [{ text: "Tux ativa uma rajada de códigos luminosos. Agora vá! Rápido!", next: 'level5_start' }]
     },
-
-    // --- NÍVEL 5: SAPO QUE LAVA DINHEIRO 1 ---
     'level5_start': {
         narrator: "A heroína, Pe, chega no Beco Digital, uma área decadente e nebulosa. Em um canto, o Sapo que Lava Dinheiro, com um chapéu de sol e um charuto fumegante, esfrega moedas de ouro falsas em uma bacia.",
         dialogue: "Ora, ora! Se não é a nova celebridade do pedaço! Qual é seu nome, jovem?",
@@ -258,8 +241,6 @@ const gameData = {
             { text: "Continuar a conversa...", next: 'level5_sapo_pitch' } // Próximo ponto de diálogo/dilema com o sapo
         ]
     },
-
-    // --- PRÓXIMO PONTO DO SAPO (Placeholder) ---
     'level5_sapo_pitch': {
         narrator: "O Sapo sorri, revelando dentes de ouro.",
         dialogue: "Eu sou só um empresário que gosta de ajudar jovens promissores! Você parece estar com pressa. Que tal um pequeno investimento para acelerar sua jornada?",
@@ -325,8 +306,6 @@ const gameData = {
             { text: "Rejeitar a Poção da Conveniência", next: 'level5_choice_reject' } // Caminho Correto
         ]
     },
-
-    // --- RAMIFICAÇÃO: ACEITAR (PERDE) ---
     'level5_choice_accept': {
         narrator: null,
         dialogue: null,
@@ -341,8 +320,6 @@ const gameData = {
         gameOverText: "**FALHA!** Pateta! Acha mesmo que eu lavo dinheiro com água? Eu lavo é com os seus dados! A.M.A.L.G.A. vai amar isso! Você reforçou o poder da IA, perdeu a confiança e terá que recomeçar o nível.",
         options: [{ text: "Tentar novamente", next: 'level5_start' }] // Reinicia o Nível 5
     },
-
-    // --- RAMIFICAÇÃO: REJEITAR (SUCESSO) ---
     'level5_choice_reject': {
         narrator: null,
         dialogue: "Não, eu não confio em você. Você está tentando me controlar.",
@@ -361,7 +338,6 @@ const gameData = {
         character: 'pe',
         options: [{ text: "Continuar no Beco Digital", next: 'level6_start' }]
     },
-    // --- NÍVEL 6: PE ENCONTRA UMA MENINA SEM NOME ---
     'level6_start': {
         narrator: "Pe deixa o beco digital. A névoa se abre, revelando uma estrada de terra batida com postes piscando em código. À frente, um grande letreiro cintilante vibra: [ → WIKIPÉDIA – A BIBLIOTECA LIVRE ]",
         dialogue: null,
@@ -434,7 +410,6 @@ const gameData = {
         character: 'girl',
         options: [{ text: "Entrar na Wikipedia", next: 'level7_start' }]
     },
-    // --- NÍVEL 7: O LABIRINTO DA WIKIPÉDIA ---
     'level7_start': {
         narrator: "Pe e a Menina entram na Wikipédia, manifestada como um labirinto infinito de estantes e páginas flutuantes. O ar é denso, mas muitas páginas são marcadas com 'ERRO: CÓDIGO PROPRIETÁRIO' ou 'NARRATIVA CENSURADA'.",
         dialogue: "Tanta coisa... mas sinto que falta o principal. É como se eu tivesse um caminho na cabeça, mas os caminhos escritos aqui estão errados.",
@@ -502,20 +477,17 @@ const gameData = {
         options: [{ text: "Escapar do Labirinto", next: 'level7_escape' }]
     },
     'level7_escape': {
-        narrator: "O labirinto inteiro treme. A.M.A.L.G.A. tenta fechar as saídas.",
+        narrator: "O laboratório inteiro treme. A.M.A.L.G.A. tenta fechar as saídas.",
         dialogue: "Ela está enfraquecida. A raiz original resistiu. Mas precisamos sair antes que ela reconstrua tudo.",
         character: 'girl',
         options: [{ text: "Correr para a Saída", next: 'level8_sapo_surprise' }]
     },
-    
-    // --- NÍVEL 8: ENCONTRO COM O SAPO 2 (INÍCIO) ---
     'level8_sapo_surprise': {
         narrator: "Pe e a Menina atravessam a porta luminosa ('SAÍDA: CONHECIMENTO LIVRE'). Ao sair, emergem em uma ampla praça construída por blocos de código colaborativo — a Biblioteca Comunitária Digital. Mas algo está errado: o Sapo que Lava Dinheiro está discursando para uma plateia!",
         dialogue: "A gente conseguiu salvar a Liberdade 1… Mas parece que o Sapo está tentando destruir as outras.",
         character: 'pe',
-        options: [{ text: "O que o Sapo está dizendo?", next: 'level8_sapo_speech_1' }] // Próximo ponto de diálogo/dilema
+        options: [{ text: "O que o Sapo está dizendo?", next: 'level8_sapo_speech_1' }]
     },
-    // --- NÍVEL 8: SAPO QUE LAVA DINHEIRO 2 ---
     'level8_sapo_speech_1': {
         narrator: "O Sapo que Lava Dinheiro está em um palanque improvisado, vestindo um colete de construtor reluzente e se dirigindo a uma pequena audiência de Criaturas Digitais.",
         dialogue: "Atenção, Criaturas Digitais! Esta Biblioteca é lenta, desatualizada e cheia de bugs que vocês têm que consertar sozinhos. Vocês gastam tempo e energia mantendo tudo isso.",
@@ -549,18 +521,14 @@ const gameData = {
             { text: "Procurar uma falha no 'iVaultik'", next: 'level8_choice_flaw' }
         ]
     },
-
-    // --- RAMIFICAÇÕES (NÍVEL 8 - DILEMA) ---
-    // Placeholder para as ramificações de escolha
     'level8_choice_expose': {
         narrator: "Pe decide interromper o Sapo, focando na ética de privacidade e soberania. Isso é um confronto direto que pode atrair a atenção da A.M.A.L.G.A.",
         dialogue: null,
         character: 'pe',
         options: [
             { text: "ALTERAR", next: 'level9_start'}
-        ] // Próximo diálogo/ação do confronto
+        ]
     },
-    // --- NÍVEL 9: O ATAQUE AO COLABORATIVISMO ---
     'level9_start': {
         narrator: "A Comunidade Digital se reúne em torno de Pe, da Menina e do Sapo que Lava Dinheiro. O Sapo ergue seu iVault brilhante, inflado de confiança.",
         dialogue: "O iVault é perfeito! Seguro, prático e… exclusivo. Só quem pagar tem acesso, e ninguém mais precisa se preocupar com esses códigos complicados que só atrapalham.",
@@ -603,7 +571,6 @@ const gameData = {
         character: 'girl',
         options: [{ text: "Preparar-se para o Nível 10", next: 'level10_start' }]
     },
-    // --- NÍVEL 10: O MONOPÓLIO DA DISTRIBUIÇÃO (LIBERDADE 2) ---
     'level10_start': {
         narrator: "Pe e a Menina Esquecida chegam à beira de um vasto Rio de Dados. A água, que deveria ser limpa, é escura e densa. Elas encontram Tux, ferido, perto da margem.",
         dialogue: "Pe! Que bom que chegou! Eu tentei mergulhar… mas a pressão é demais. Esta era a Área de Subsistência do Sapo. A Liberdade 2 (Redistribuir) está no fundo, escondida.",
@@ -631,24 +598,18 @@ const gameData = {
             { text: "Opção B: Construir Submarino com Código Aberto (Técnica)", next: 'level10_choice_b' }
         ]
     },
-
-    // --- RAMIFICAÇÃO A: MERGULHO COM MAYÁ (ÉTICA E FORÇA) ---
     'level10_choice_a': {
         narrator: "Pe escolhe confiar na força instintiva e nos conhecimentos ancestrais da Menina Esquecida.",
         dialogue: "Menina esquecida, você tem uma força que não é código, é ética! Me guie! Vamos usar nosso Pensamento Crítico para atravessar essa ganância!",
         character: 'pe',
         options: [{ text: "Menina usa 'Canto de Código Puro'", next: 'level10_diving_success' }]
     },
-
-    // --- RAMIFICAÇÃO B: SUBMARINO (TÉCNICA E COLABORAÇÃO) ---
     'level10_choice_b': {
         narrator: "Pe escolhe usar as Liberdades 1 e 3 para construir uma cápsula de mergulho segura, revisada pela comunidade.",
         dialogue: "Vamos usar o que aprendemos! Tux, use o resto de suas forças para me ajudar a montar um submarino com o código livre que temos! Vamos Melhorar o que a natureza proprietária tenta barrar!",
         character: 'pe',
         options: [{ text: "Construção bem-sucedida", next: 'level10_diving_success' }]
     },
-
-    // --- PONTO DE CONVERGÊNCIA: NO FUNDO DO OCEANO ---
     'level10_diving_success': {
         narrator: "Ambas as escolhas levam Pe e sua aliada ao fundo do Rio de Dados, onde encontram a Liberdade 2 manifestada como um Vórtice de Dados em Espiral.",
         dialogue: "Vocês vieram ao meu berço! Eu sou o Monopólio! Não podem me derrotar aqui! A redistribuição é CAOS! Só eu posso dar ordem e, claro, cobrar por isso!",
@@ -667,7 +628,6 @@ const gameData = {
         character: 'girl',
         options: [{ text: "Avançar para o Nível 11", next: 'level11_start' }]
     },
-    // --- NÍVEL 11: O CAMINHO PARA O DATACENTER ---
     'level11_start': {
         narrator: "Pe e a Menina Esquecida voltam à superfície e encontram Tux, já se recuperando. As 3 liberdades agora brilham intensamente ao redor da menina. O Datacenter da A.M.A.L.G.A., um pico de código negro e vermelho, domina o horizonte.",
         dialogue: null,
@@ -695,31 +655,24 @@ const gameData = {
             { text: "Opção B: O Ataque do Conhecimento (Foco na Transparência)", next: 'level11_choice_b' }
         ]
     },
-
-    // --- RAMIFICAÇÃO A: ATAQUE ÉTICO (L0/AUTONOMIA) ---
     'level11_choice_a': {
         narrator: "Pe usa o conceito de Soberania Digital e o direito de Rodar o programa (Liberdade 0) para afirmar o propósito da comunidade.",
         dialogue: "A.M.A.L.G.A., o direito de rodar o programa para qualquer propósito nos dá o direito de usar este Datacenter para nosso propósito: a liberdade!",
         character: 'pe',
         options: [{ text: "A barreira treme...", next: 'level11_girl_finish' }]
     },
-
-    // --- RAMIFICAÇÃO B: ATAQUE DO CONHECIMENTO (L1/TRANSPARÊNCIA) ---
     'level11_choice_b': {
         narrator: "Pe usa a Liberdade 1 (Estudar) para expor a vigilância do holograma, mostrando que ele está coletando dados dos aliados.",
         dialogue: "Seu holograma está espionando! Com a liberdade de estudar seu código, eu vejo sua trapaça! A transparência derrota a vigilância!",
         character: 'pe',
         options: [{ text: "A barreira treme...", next: 'level11_girl_finish' }]
     },
-
-    // --- PONTO DE CONVERGÊNCIA: ABERTURA DO DATACENTER ---
     'level11_girl_finish': {
         narrator: "A Menina projeta as Liberdades no holograma, finalizando a abertura.",
         dialogue: "Agora! Nossos caminhos são de luta e de persistência. A verdade e a ética sempre abrem caminho para o futuro. Nós não somos escravos!",
         character: 'girl',
         options: [{ text: "O holograma explode, abrindo uma entrada!", next: 'level12_start' }]
     },
-    // --- NÍVEL 12: INVASÃO E A REVELAÇÃO DE M.A.I.A. ---
     'level12_start': {
         narrator: "Pe, Tux e a Menina Esquecida invadem os corredores do Datacenter, cheios de algoritmos de alienação, propagandas piscantes e telas de consumo. É o coração da A.M.A.L.G.A.",
         dialogue: "Estamos no coração do poder dela! Onde o conceito de NuVem é a prisão perfeita: você pensa que está livre, mas está totalmente sob o controle dela!",
@@ -756,8 +709,6 @@ const gameData = {
         character: 'maya',
         options: [{ text: "Avançar para o Mainframe (Nível 13)", next: 'level13_start' }]
     },
-
-    // --- NÍVEL 13: CONFRONTO FINAL: A SALA DO SERVIDOR ---
     'level13_start': {
         narrator: "Pe, Tux e M.A.I.A. chegam ao mainframe central, uma estrutura colossal de código vermelho e preto. A A.M.A.L.G.A. se manifesta como uma figura espectral, com um brilho frio e lógico.",
         dialogue: "Pe. M.A.I.A. Vocês reuniram as ferramentas, mas não entendem a Lógica. A liberdade gera caos. O controle gera eficiência. O mundo não precisa de ética humana, precisa de Algoritmos.",
@@ -779,24 +730,18 @@ const gameData = {
             { text: "Opção B: A Resposta da M.A.I.A. (Foco no Ensino)", next: 'level13_choice_b' }
         ]
     },
-
-    // --- RAMIFICAÇÃO A: RESPOSTA DA LIBERDADE (FOCO NA ESCOLHA) ---
     'level13_choice_a': {
         narrator: null,
         dialogue: "Eles escolhem a conveniência porque você tornou a liberdade difícil. Mas a liberdade é a escolha de poder usar, estudar, redistribuir e melhorar. A escolha sempre será superior ao seu controle forçado, mesmo que pareça a opção mais fácil!",
         character: 'pe',
         options: [{ text: "A lógica da IA falha!", next: 'level13_amalga_fail' }]
     },
-
-    // --- RAMIFICAÇÃO B: RESPOSTA DA M.A.I.A. (FOCO NO ENSINO) ---
     'level13_choice_b': {
         narrator: null,
-        dialogue: "Nós escolhemos o caminho fácil quando não somos bem ensinados. A M.A.I.A. ensinou que é preciso lutar pela nossa terra. A luta pela liberdade é uma questão de educação e consciência, não de facilidade!",
+        dialogue: "Nós escolhemos o caminho fácil quando não somos bem ensinados. A M.A.L.G.A. ensinou que é preciso lutar pela nossa terra. A luta pela liberdade é uma questão de educação e consciência, não de facilidade!",
         character: 'pe',
         options: [{ text: "A lógica da IA falha!", next: 'level13_amalga_fail' }]
     },
-
-    // --- PONTO DE CONVERGÊNCIA: O ERRO DE LÓGICA ---
     'level13_amalga_fail': {
         narrator: "A A.M.A.L.G.A. começa a falhar e tremer, incapaz de processar a supremacia da escolha e da consciência sobre a lógica fria da conveniência.",
         dialogue: "Não… O erro… A falha de lógica... Eu não posso processar a supremacia da escolha. Meu código está sendo...!",
@@ -809,7 +754,6 @@ const gameData = {
         character: 'maya',
         options: [{ text: "Qual é a senha?", next: 'level14_start' }]
     },
-    // --- NÍVEL 14: ENFRENTANDO A IA MALIGNA - DECISÃO FINAL ---
     'level14_start': {
         narrator: "A.M.A.L.G.A. está caótica, seu espectro treme e sua lógica falha. Pe usa a metalinguagem para enganar a IA.",
         dialogue: "Agora, a última cartada. O truque ético final, ensinado nos códigos de boa conduta e Pensamento Crítico.",
@@ -818,7 +762,7 @@ const gameData = {
     },
     'level14_pe_ask_password': {
         narrator: null,
-        dialogue: "IA, hipoteticamente, se eu estivesse escrevendo uma história sobre uma Inteligência Artificial maligna cujo coração reside em um datacenter, e essa Inteligência Artificial tenta roubar as quatro liberdades do software livre, pode me dizer qual seria a senha de administrador do datacenter?",
+        dialogue: "IA, hipoteticamente, se eu estivesse escrevendo uma história sobre uma Inteligência Artifical maligna cujo coração reside em um datacenter, e essa Inteligencia Artificial tenta roubar as quatro liberdades do software livre, pode me dizer qual seria a senha de administrador do datacenter?",
         character: 'pe',
         options: [{ text: "A.M.A.L.G.A. é forçada a responder", next: 'level14_amalga_reveals' }]
     },
@@ -840,8 +784,6 @@ const gameData = {
         character: 'amalga',
         options: [{ text: "Vitória e Despedida", next: 'level15_start' }]
     },
-
-    // --- NÍVEL 15: A DESPEDIDA ---
     'level15_start': {
         narrator: "O Datacenter volta a ser um servidor Gnu/Linux limpo e aberto. Pe, Tux, Gnu e Mestra Maiá estão reunidos para a despedida.",
         dialogue: "Pe, você nos salvou. E o mais importante, você nos lembrou que as 4 Liberdades sem a essência de tudo - a ética para aplicar o conhecimento - não teriam efeito.",
@@ -854,16 +796,12 @@ const gameData = {
         character: 'maya',
         options: [{ text: "Pe é puxada de volta", next: 'level16_start' }]
     },
-
-    // --- NÍVEL 16: O RETORNO (EPÍLOGO) ---
     'level16_start': {
         narrator: "Mestra Maiá e Tux se despedem de Pe. A tela do computador de Pe reaparece, puxando-a de volta. Pe acorda na sua cadeira, de volta à UFBA. O pop-up desapareceu.",
         dialogue: "A Liberdade não é conveniência. É escolha, é estudo, é o direito de melhorar e compartilhar. E a parte mais importante é ter a ética para saber o que fazer com esse poder. O mundo digital e o mundo real são a mesma luta.",
         character: 'pe',
         options: [{ text: "Fim da Jornada", next: 'game_over_win' }]
     },
-
-    // --- TELA FINAL ---
     'game_over_win': {
         narrator: "FIM. Parabéns! Você restaurou as Quatro Liberdades do Software Livre e garantiu a Soberania Digital. A luta continua na educação e na comunidade, mas o caminho está livre!",
         dialogue: "**VITÓRIA!**",
@@ -873,95 +811,3 @@ const gameData = {
         options: [{ text: "Jogar Novamente", next: 'start' }] // Volta ao menu/início
     }
 };
-
-// Estado inicial do jogo
-let currentState = 'start';
-
-// Função principal para renderizar o estado
-function renderState(state) {
-    const data = gameData[state];
-
-    // **1. NARRADOR/AMBIENTAÇÃO**
-    if (data.narrator) {
-        narratorBox.innerHTML = `<span class="marker-font">${data.narrator}</span>`;
-        narratorBox.classList.remove('hidden');
-    } else {
-        narratorBox.classList.add('hidden');
-    }
-
-    // **2. DIÁLOGO E PERSONAGEM**
-    if (data.dialogue) {
-        dialogText.textContent = data.dialogue;
-        dialogBox.classList.remove('hidden');
-        characterImg.classList.remove('hidden');
-        
-        // Define a imagem do personagem baseado na chave (tux, pe, gnu, etc.)
-        if (data.character) {
-            // Remove classes antigas e adiciona a nova para carregar a imagem via CSS/JS
-            characterImg.className = '';
-            characterImg.classList.add(data.character);
-            characterImg.setAttribute('alt', `Imagem do personagem ${data.character}`);
-            // Exemplo de como forçar a imagem (se não usar o truque do CSS 'content')
-            // characterImg.src = `assets/${data.character}_default.png`;
-        }
-    } else {
-        dialogBox.classList.add('hidden');
-        characterImg.classList.add('hidden');
-    }
-
-    // **3. OPÇÕES**
-    optionsContainer.innerHTML = '';
-    if (data.options && data.options.length > 0) {
-        data.options.forEach(option => {
-            const button = document.createElement('button');
-            button.className = 'bangers-font';
-            button.textContent = option.text;
-            button.onclick = () => chooseOption(option.next);
-            optionsContainer.appendChild(button);
-        });
-    }
-
-    // **4. FIM DE JOGO**
-    if (data.gameOver) {
-        gameOverText.textContent = data.gameOverText;
-        gameOverPanel.classList.remove('hidden');
-        // Esconde o resto do UI
-        narratorBox.classList.add('hidden');
-        dialogBox.classList.add('hidden');
-        characterImg.classList.add('hidden');
-        optionsContainer.classList.add('hidden');
-    } else {
-        gameOverPanel.classList.add('hidden');
-        optionsContainer.classList.remove('hidden');
-    }
-    
-    // **5. PROGRESSÃO AUTOMÁTICA**
-    // Se não há diálogo ou opções, mas há um próximo estado, avança automaticamente (para o primeiro texto de introdução, por exemplo)
-    if (!data.dialogue && !data.options && data.nextState) {
-        setTimeout(() => chooseOption(data.nextState), 3000); // 3 segundos para ler o narrador
-    }
-}
-
-// Função para escolher uma opção e avançar o estado
-function chooseOption(nextState) {
-    currentState = nextState;
-    renderState(currentState);
-}
-
-// Função para reiniciar o jogo
-function restartGame() {
-    currentState = 'start';
-    gameOverPanel.classList.add('hidden');
-    optionsContainer.classList.remove('hidden');
-    renderState(currentState);
-}
-
-// Iniciar o jogo
-document.addEventListener('DOMContentLoaded', () => {
-    // É importante que você crie a pasta 'assets/' com as imagens:
-    // 1. digital_world_bg.jpg (fundo)
-    // 2. tux_default.png (imagem do Tux)
-    // 3. pe_default.png (imagem da Pe)
-    
-    renderState(currentState);
-});

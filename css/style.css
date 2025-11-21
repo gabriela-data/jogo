@@ -7,7 +7,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #f0f0f0;
-    background-image: url('fundo1.png'); /* **MUDAR IMAGEM** - Coloque uma imagem de "Mundo Digital" */
+    background-image: url('../assets/fundo1.png'); /* **MUDAR IMAGEM** - Coloque uma imagem de "Mundo Digital" em assets/ */
     background-size: cover;
     background-position: center;
 }
@@ -171,8 +171,8 @@ button:hover {
 }
 
 /* Classes para personagens (usar com src da imagem) */
-.pe { content: url(''); } /* Criar a imagem 'pe_default.png' */
-.tux { content: url('../assets/tux.png'); } /* Criar a imagem 'tux_default.png' */
+.pe { content: url('../assets/tux.png'); } /* placeholder: usar 'pe' aponta para tux se não houver imagem específica */
+.tux { content: url('../assets/tux.png'); }
 .tux_ferido { content: url('../assets/tux_ferido.png'); } /* Tux ferido */
 .gnu { content: url(''); } /* Para o Mestre Gnu */
 .pidgin { content: url('../assets/pidinho.png'); } /* Para o Pidinho */
