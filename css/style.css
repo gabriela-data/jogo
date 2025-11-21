@@ -1,0 +1,182 @@
+/* Estilos Globais e Fontes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    background-image: url('fundo1.png'); /* **MUDAR IMAGEM** - Coloque uma imagem de "Mundo Digital" */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Fontes Gibi */
+.bangers-font {
+    font-family: 'Bangers', cursive;
+}
+.marker-font {
+    font-family: 'Permanent Marker', cursive;
+}
+
+#game-container {
+    width: 90%;
+    max-width: 800px;
+    min-height: 500px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 10px solid #333;
+    border-radius: 5px;
+    box-shadow: 10px 10px 0 #333;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Painel de Narrador/Ambientação */
+#narrator-box {
+    background-color: #fce8a6; /* Amarelo de papel velho */
+    border: 5px solid #333;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    font-style: italic;
+    color: #333;
+    box-shadow: 3px 3px 0 #666;
+    font-family: 'Permanent Marker', cursive;
+}
+
+/* Container de Personagem e Diálogo */
+#character-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    min-height: 250px;
+}
+
+#character-img {
+    width: 150px;
+    height: auto;
+    border: 3px solid #333;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0 #666;
+    object-fit: contain;
+}
+
+/* Balão de Fala Estilizado */
+.speech-bubble {
+    background: #fff;
+    border: 5px solid #333;
+    border-radius: 0.4em;
+    padding: 15px 20px;
+    position: relative;
+    flex-grow: 1;
+    min-height: 80px;
+    box-shadow: 5px 5px 0 #666;
+}
+
+.speech-bubble:after, .speech-bubble:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    display: block;
+    width: 0;
+}
+
+/* Ponta do Balão (Ajustar para apontar para o personagem) */
+.speech-bubble:before {
+    left: -20px; /* Posição à esquerda do balão */
+    bottom: 30px;
+    border-color: transparent #333 transparent transparent;
+    border-width: 20px 20px 20px 0;
+}
+
+.speech-bubble:after {
+    left: -15px; /* Posição à esquerda do balão */
+    bottom: 30px;
+    border-color: transparent #fff transparent transparent;
+    border-width: 20px 20px 20px 0;
+}
+
+#dialog-text {
+    font-size: 1.3em;
+    font-family: 'Permanent Marker', cursive;
+    margin: 0;
+}
+
+/* Opções */
+#options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #e53935; /* Vermelho vibrante */
+    color: #fff;
+    border: 5px solid #333;
+    padding: 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 #333;
+    transition: all 0.1s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Bangers', cursive;
+}
+
+button:hover {
+    background-color: #f44336;
+    transform: translate(1px, 1px);
+    box-shadow: 4px 4px 0 #333;
+}
+
+/* Painel de Jogo Perdido */
+#game-over-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    z-index: 10;
+}
+
+#game-over-panel h2 {
+    color: #ffeb3b; /* Amarelo */
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#game-over-text {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+/* Utilidade */
+.hidden {
+    display: none !important;
+}
+
+/* Classes para personagens (usar com src da imagem) */
+.pe { content: url(''); } /* Criar a imagem 'pe_default.png' */
+.tux { content: url('assets/tux.png'); } /* Criar a imagem 'tux_default.png' */
+.tux_ferido { content: url('assets/tux_ferido.png'); } /* Tux ferido */
+.gnu { content: url(''); } /* Para o Mestre Gnu */
+.pidgin { content: url('assets/pidinho.png'); } /* Para o Pidinho */
+.sapo { content: url(''); } /* NOVO: Sapo que Lava Dinheiro */
+.amalga { content: url(''); } /* Algo que lembra uma sombra de IA */
+.girl { content: url(''); } /* Menina Sem Nome */
+.combatant { content: url(''); } /* Combatente da IA */
