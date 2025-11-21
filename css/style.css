@@ -172,10 +172,10 @@ button:hover {
 
 /* Classes para personagens (usar com src da imagem) */
 .pe { content: url(''); } /* Criar a imagem 'pe_default.png' */
-.tux { content: url('assets/tux.png'); } /* Criar a imagem 'tux_default.png' */
-.tux_ferido { content: url('assets/tux_ferido.png'); } /* Tux ferido */
+.tux { content: url('../assets/tux.png'); } /* Criar a imagem 'tux_default.png' */
+.tux_ferido { content: url('../assets/tux_ferido.png'); } /* Tux ferido */
 .gnu { content: url(''); } /* Para o Mestre Gnu */
-.pidgin { content: url('assets/pidinho.png'); } /* Para o Pidinho */
+.pidgin { content: url('../assets/pidinho.png'); } /* Para o Pidinho */
 .sapo { content: url(''); } /* NOVO: Sapo que Lava Dinheiro */
 .amalga { content: url(''); } /* Algo que lembra uma sombra de IA */
 .girl { content: url(''); } /* Menina Sem Nome */
