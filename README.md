@@ -48,7 +48,7 @@ O jogo não requer instalação de pacotes externos ou servidor complexo.
 
 1.  **Clone o Repositório:**
     ```bash
-    git clone [LINK DO SEU REPOSITÓRIO]
+    git clone https://github.com/gabriela-data/jogo
     cd pe-e-as-quatro-liberdades
     ```
 2.  **Abra o Arquivo:** Simplesmente abra o arquivo `index.html` em qualquer navegador moderno (Chrome, Firefox, Edge, etc.).
@@ -59,4 +59,4 @@ O jogo não requer instalação de pacotes externos ou servidor complexo.
 Contribuições para aprimoramento da narrativa, design ou implementação de recursos (como salvamento de progresso) são bem-vindas! Sinta-se à vontade para abrir uma `issue` ou enviar um `pull request`.
 
 ---
-**Desenvolvido como projeto final para [MATA68 - Computação, Ética e Sociedade (UFBA)].**
+**Desenvolvido como projeto final para MATA68 - Computação, Ética e Sociedade (UFBA).**
