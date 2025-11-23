@@ -176,7 +176,7 @@ button:hover {
 .tux_ferido { content: url('../assets/tux_ferido.png'); } /* Tux ferido */
 .gnu { content: url(''); } /* Para o Mestre Gnu */
 .pidgin { content: url('../assets/pidinho.png'); } /* Para o Pidinho */
-.sapo { content: url(''); } /* Sapo que Lava Dinheiro */
+.sapo { content: url('../assets/sapo.png'); } /* Sapo que Lava Dinheiro */
 .amalga { content: url(''); } /* Algo que lembra uma sombra de IA */
 .girl { content: url(''); } /* Menina Sem Nome */
 .combatant { content: url(''); } /* Combatente da IA */

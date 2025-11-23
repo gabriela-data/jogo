@@ -19,7 +19,7 @@ export const level5 = {
         dialogue: "Eu sou só um empresário que gosta de ajudar jovens promissores! Você parece estar com pressa. Que tal um pequeno investimento para acelerar sua jornada?",
         character: 'sapo',
         options: [
-            { text: "Responder ao sapo'", next: 'level5_pe_answer' }
+            { text: "Responder ao sapo'", next: 'level5_sapo_pitch_1' }
         ]
     },
     'level5_sapo_pitch_1': {
