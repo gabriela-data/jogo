@@ -4,7 +4,11 @@ export const level1 = {
         narrator: "A Pe navega tranquilamente pela internet em sua estação de trabalho, quando, de repente, um link suspeito (que ela jura nunca ter clicado) a suga para dentro do computador!",
         dialogue: null,
         character: null,
-        nextState: 'level1_intro'
+        nextState: 'level1_intro',
+                options: [
+            { text: "Próximo", next: 'level1_intro' },
+
+        ]
     },
     'level1_intro': {
         narrator: "Em um flash de luz e código, Pe aterrissa em um lugar colorido e cheio de símbolos flutuantes: o Mundo Digital! Ela é recebida por um pinguim sorridente...",
