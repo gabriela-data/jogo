@@ -180,3 +180,9 @@ button:hover {
 .amalga { content: url('../assets/ia_maligna.png'); } /* Algo que lembra uma sombra de IA */
 .girl { content: url('../assets/girl.png'); } /* Menina Sem Nome */
 .combatant { content: url('../assets/combatente.png'); } /* Combatente da IA */
+
+img{
+    image-rendering: pixelated;
+    min-height: 6em;
+    min-width: 6em;
+}
