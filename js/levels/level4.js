@@ -10,7 +10,13 @@ export const level4 = {
         narrator: "Pe e Tux se despedem de Pidinho e continuam seguindo o caminho. O ar fica mais tenso.",
         dialogue: "Muito obrigado por ajudar o Pidinho, Pe! Ele agora está bem melhor.",
         character: 'tux',
-        options: [{ text: "Continuar a busca", next: 'level4_name_reveal' }]
+        options: [{ text: "Por nada!", next: 'level4_name' }]
+    },
+    'level4_name': {
+        narrator: null,
+        dialogue: "Por nada! Mas por que vocês me chamam de 'Pe'? Este não é meu nome.",
+        character: 'pe',
+        options: [{ text: "Ouvir resposta", next: 'level4_name_reveal' }]
     },
     'level4_name_reveal': {
         narrator: null,
