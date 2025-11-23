@@ -42,7 +42,7 @@ export const level13 = {
     'level13_maya_final_key': {
         narrator: "M.A.I.A. avança, projetando o poder restaurado das Liberdades sobre o mainframe.",
         dialogue: "Seu código proprietário sempre teve medo da verdade. Agora, vamos reescrevê-lo! Pe, a chave para parar o processo dela é uma falha de segurança que só um ser ilógico revela... A senha de administrador!",
-        character: 'maya',
+        character: 'girl',
         options: [{ text: "Qual é a senha?", next: 'level14_start' }]
     }
 };

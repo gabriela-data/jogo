@@ -9,7 +9,7 @@ export const level15 = {
     'level15_maya_despedida': {
         narrator: null,
         dialogue: "Meu trabalho aqui está feito. As Liberdades estão seguras, e o Pensamento Crítico está de volta ao código. Mas minha luta real, a minha Terra... está lá fora.",
-        character: 'maya',
+        character: 'girl',
         options: [{ text: "Pe é puxada de volta", next: 'level16_start' }]
     }
 };
