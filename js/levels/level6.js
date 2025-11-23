@@ -8,7 +8,7 @@ export const level6 = {
     },
     'level6_girl_appears': {
         narrator: "Quando está quase chegando, uma menina surge do nada, como se tivesse acabado de aparecer entre um piscar de olho e outro. Ela parece normal, mas tem um olhar perdido.",
-        dialogue: "O que você está fazendo aqui?",
+        dialogue: "Ei, o que você está fazendo aqui?",
         character: 'girl',
         options: [{ text: "Responder à garota", next: 'level6_pe_question' }]
     },
@@ -22,7 +22,7 @@ export const level6 = {
         narrator: "A menina olha para os lados, confusa, e fecha os olhos como se buscasse algo dentro de si.",
         dialogue: "Não sei.",
         character: 'girl',
-        options: [{ text: "Oxe, menina… mas e qual o seu nome?", next: 'level6_girl_instinct' }]
+        options: [{ text: "Oxe, menina… mas... e qual o seu nome?", next: 'level6_girl_instinct' }]
     },
     'level6_girl_instinct': {
         narrator: null,
@@ -38,7 +38,7 @@ export const level6 = {
     },
     'level6_pe_fail': {
         narrator: "Pe estica o braço dramaticamente. Nada acontece. Nenhuma luz. Nenhum poder. Nada.",
-        dialogue: "Vá, poder da É-tikará! Vai! Poxa, não funcionou... Ah, só agora que eu queria parecer “MASSA”...",
+        dialogue: "Vá, poder da É-tikará! Vaaai! Poxa, não funcionou... Ah, só agora que eu queria parecer “MASSA”...",
         character: 'pe',
         options: [{ text: "Desviar do ataque!", next: 'level6_girl_attack' }]
     },

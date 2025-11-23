@@ -23,12 +23,12 @@ export const endings = {
         gameOverText: "FALHA! Pateta! Acha mesmo que eu lavo dinheiro com água? Eu lavo é com os seus dados! A.M.A.L.G.A. vai amar isso! Você reforçou o poder da IA, perdeu a confiança e terá que recomeçar o nível.",
         options: [{ text: "Tentar novamente", next: 'level5_start' }]
     },
-    'lever6_refletion_recusa': {
+    'level6_refletion_recusa': {
         narrator: "Pe segue sozinha em direção ao portal cintilante da Wikipédia. A névoa a envolve, e ela sente uma estranha sensação de vazio.",
         dialogue: null,
         character: null,
         gameOver: true,
-        gameOverText: "REFLEXÃO: Sozinha, Pe entra na Wikipédia, mas sente falta da força que a aliança poderia ter lhe dado. A jornada para restaurar as Quatro Liberdades do Software Livre será mais difícil sem aliados. A liberdade é uma escolha coletiva.",
+        gameOverText: "REFLEXÃO: Sozinha, Pe entra na Wikipédia, mas sente falta da força que a aliança poderia ter lhe dado. A jornada para restaurar as Quatro Liberdades do Software Livre não é possível sem aliados. A liberdade é uma escolha coletiva.",
         options: [{ text: "Reconsiderar e voltar para buscar a menina", next: 'level6_start' }]
     },
     'game_over_win': {
