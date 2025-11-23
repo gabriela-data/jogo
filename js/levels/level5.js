@@ -1,14 +1,14 @@
 // Módulo: Level 5 (Beco Digital e o Sapo que Lava Dinheiro)
 export const level5 = {
     'level5_start': {
-        narrator: "A heroína, Pe, chega no Beco Digital, uma área decadente e nebulosa. Em um canto, o Sapo que Lava Dinheiro, com um chapéu de sol e um charuto fumegante, esfrega moedas de ouro falsas em uma bacia.",
+        narrator: "A heroína, Pe, chega no Beco Digital, uma área decadente e nebulosa. Em um canto, o Sapo que Lava Dinheiro, com um chapéu de sol, esfrega moedas de ouro falsas em uma bacia.",
         dialogue: "Ora, ora! Se não é a nova celebridade do pedaço! Qual é seu nome, jovem?",
         character: 'sapo',
         options: [{ text: "Responder cautelosamente", next: 'level5_pe_answer' }]
     },
     'level5_pe_answer': {
         narrator: null,
-        dialogue: "Sou Pe, quem é você?",
+        dialogue: "Não te interessa!",
         character: 'pe',
         options: [
             { text: "Continuar a conversa...", next: 'level5_sapo_pitch' }
@@ -84,7 +84,7 @@ export const level5 = {
         dialogue: null,
         character: null,
         gameOver: true,
-        gameOverText: "**FALHA!** Pateta! Acha mesmo que eu lavo dinheiro com água? Eu lavo é com os seus dados! A.M.A.L.G.A. vai amar isso! Você reforçou o poder da IA, perdeu a confiança e terá que recomeçar o nível.",
+        gameOverText: "Pateta! Acha mesmo que eu lavo dinheiro com água? Eu lavo é com os seus dados! A.M.A.L.G.A. vai amar isso! Você reforçou o poder da IA, perdeu a confiança e terá que recomeçar o nível.",
         options: [{ text: "Tentar novamente", next: 'level5_start' }]
     },
     'level5_choice_reject': {
