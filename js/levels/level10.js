@@ -3,7 +3,7 @@ export const level10 = {
     'level10_start': {
         narrator: "Pe e a Menina Esquecida chegam à beira de um vasto Rio de Dados. A água, que deveria ser limpa, é escura e densa. Elas encontram Tux, ferido, perto da margem.",
         dialogue: "Pe! Que bom que chegou! Eu tentei mergulhar… mas a pressão é demais. Esta era a Área de Subsistência do Sapo. A Liberdade 2 (Redistribuir) está no fundo, escondida.",
-        character: 'tux',
+        character: 'tux_ferido',
         options: [{ text: "Analisar a água escura", next: 'level10_girl_memory' }]
     },
     'level10_girl_memory': {
@@ -15,7 +15,7 @@ export const level10 = {
     'level10_tux_corruption': {
         narrator: null,
         dialogue: "A A.M.A.L.G.A. prometeu a ele a exclusividade sobre o fluxo de dados. Ele se tornou um Monopolista, cobrando por cada dado que passava. Assim, ele corrompeu a Redistribuição e se tornou um Lava Dinheiro.",
-        character: 'tux',
+        character: 'tux_ferido',
         options: [{ text: "Escolher a estratégia de mergulho", next: 'level10_choice' }]
     },
     'level10_choice': {
