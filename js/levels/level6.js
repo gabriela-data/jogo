@@ -58,7 +58,10 @@ export const level6 = {
         narrator: null,
         dialogue: "Eu só… senti que precisava.",
         character: 'girl',
-        options: [{ text: "Fazer uma aliança", next: 'level6_pe_alliance' }]
+        options: [{ 
+            text: "Fazer uma aliança", next: 'level6_pe_alliance' },
+            { text: "Ignorar a menina e seguir para o portal", next: 'level6_refletion_recusa' }
+        ]
     },
     'level6_pe_alliance': {
         narrator: "Pe a observa por um instante. Uma estranha sem nome, sem memória, com força absurda.",
@@ -71,7 +74,7 @@ export const level6 = {
         dialogue: "Tá.",
         character: 'girl',
         options: [{ text: "Entrar na Wikipedia", next: 'level7_start' }]
-    }
+    },
 };
 
 export default level6;

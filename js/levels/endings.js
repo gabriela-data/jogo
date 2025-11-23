@@ -20,12 +20,20 @@ export const endings = {
         dialogue: null,
         character: null,
         gameOver: true,
-        gameOverText: "**FALHA!** Pateta! Acha mesmo que eu lavo dinheiro com água? Eu lavo é com os seus dados! A.M.A.L.G.A. vai amar isso! Você reforçou o poder da IA, perdeu a confiança e terá que recomeçar o nível.",
+        gameOverText: "FALHA! Pateta! Acha mesmo que eu lavo dinheiro com água? Eu lavo é com os seus dados! A.M.A.L.G.A. vai amar isso! Você reforçou o poder da IA, perdeu a confiança e terá que recomeçar o nível.",
         options: [{ text: "Tentar novamente", next: 'level5_start' }]
+    },
+    'lever6_refletion_recusa': {
+        narrator: "Pe segue sozinha em direção ao portal cintilante da Wikipédia. A névoa a envolve, e ela sente uma estranha sensação de vazio.",
+        dialogue: null,
+        character: null,
+        gameOver: true,
+        gameOverText: "REFLEXÃO: Sozinha, Pe entra na Wikipédia, mas sente falta da força que a aliança poderia ter lhe dado. A jornada para restaurar as Quatro Liberdades do Software Livre será mais difícil sem aliados. A liberdade é uma escolha coletiva.",
+        options: [{ text: "Reconsiderar e voltar para buscar a menina", next: 'level6_start' }]
     },
     'game_over_win': {
         narrator: "FIM. Parabéns! Você restaurou as Quatro Liberdades do Software Livre e garantiu a Soberania Digital. A luta continua na educação e na comunidade, mas o caminho está livre!",
-        dialogue: "**VITÓRIA!**",
+        dialogue: "VITÓRIA!",
         character: null,
         gameOver: true,
         gameOverText: "Você garantiu um Mundo Digital livre, ético e colaborativo. A liberdade é uma escolha diária.",
