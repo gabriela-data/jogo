@@ -59,7 +59,7 @@ export const level3 = {
     },
     'level3_choice1_win': {
         narrator: "O jogador escolhe ajudar Pidinho. Juntos, ensinam-no a usar senhas fortes, a não compartilhar informações sensíveis e a construir um ninho digital mais seguro, no topo de uma árvore. Pidinho, agora mais responsável, se junta à causa.",
-        dialogue: "A Liberdade 0 (Liberdade de executar o programa como você desejar) estava oculta no ninho de Pidinho, sendo usada para fins que ele não desejava. Você a recuperou! A A.M.A.L.G.A. perdeu um ponto de vigilância. **Liberdade 0 Recuperada!**",
+        dialogue: "A Liberdade 0 (Liberdade de executar o programa como você desejar) estava oculta no ninho de Pidinho, sendo usada para fins que ele não desejava. Você a recuperou! A A.M.A.L.G.A. perdeu um ponto de vigilância. Liberdade 0 Recuperada!",
         character: 'pidgin',
         options: [{ text: "Continuar a aventura...", next: 'level4_start' }]
     },

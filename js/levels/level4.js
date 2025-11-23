@@ -56,7 +56,7 @@ export const level4 = {
     },
     'level4_tux_instructions': {
         narrator: null,
-        dialogue: "Pe! Vá para a **Wikipedia**, a biblioteca livre do mundo digital! Há rumores de que ela se transformou em um labirinto. Pegue o atalho do **Beco Digital**, mas cuidado, não fale com ninguém do beco!",
+        dialogue: "Pe! Vá para a Wikipedia, a biblioteca livre do mundo digital! Há rumores de que ela se transformou em um labirinto. Pegue o atalho do Beco Digital, mas cuidado, não fale com ninguém do beco!",
         character: 'tux',
         options: [{ text: "Tux ativa uma rajada de códigos luminosos. Agora vá! Rápido!", next: 'level5_start' }]
     }

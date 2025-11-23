@@ -1,7 +1,7 @@
 // Módulo: Level 6 (Portal para a Wikipédia e Menina)
 export const level6 = {
     'level6_start': {
-        narrator: "Pe deixa o beco digital. A névoa se abre, revelando uma estrada de terra batida com postes piscando em código. À frente, um grande letreiro cintilante vibra: [ → WIKIPÉDIA – A BIBLIOTECA LIVRE ]",
+        narrator: "Pe deixa o beco digital. A névoa se abre, revelando uma estrada de terra batida com postes piscando em código. À frente, um grande letreiro cintilante vibra: → WIKIPÉDIA – A BIBLIOTECA LIVRE DO MUNDO DIGITAL ← ",
         dialogue: null,
         character: null,
         options: [{ text: "Seguir em direção ao portal", next: 'level6_girl_appears' }]
