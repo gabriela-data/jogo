@@ -20,7 +20,7 @@ export const level7 = {
     },
     'level7_pe_liberty1_warn': {
         narrator: null,
-        dialogue: "Veja! A **Liberdade 1**, a de estudar o programa e adaptá-lo, está sendo atacada! Se não podemos estudar o código, não sabemos se ele está espionando. Se não podemos estudar a história, somos forçados a aceitar a história dela!",
+        dialogue: "Veja! A Liberdade 1, a de estudar o programa e adaptá-lo, está sendo atacada! Se não podemos estudar o código, não sabemos se ele está espionando. Se não podemos estudar a história, somos forçados a aceitar a história dela!",
         character: 'pe',
         options: [{ text: "A Menina toca o código base", next: 'level7_girl_roots' }]
     },
@@ -56,7 +56,7 @@ export const level7 = {
     },
     'level7_liberty1_found': {
         narrator: "Pe segura a estante junto com ela. Um brilho azul se espalha pelo código base. As páginas reescritas começam a se desfazer, voltando ao formato original. Entre elas, um bloco de código dourado emerge.",
-        dialogue: "Isso… isso deve ser ela. A **Liberdade 1**!",
+        dialogue: "Isso… isso deve ser ela. A Liberdade 1!",
         character: 'pe',
         options: [{ text: "A Liberdade entra no bracelete de Pe", next: 'level7_amalga_furious' }]
     },

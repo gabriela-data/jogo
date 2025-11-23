@@ -52,7 +52,7 @@ export const level10 = {
         options: [{ text: "Pe realiza a Redistribuição", next: 'level10_liberty2_secured' }]
     },
     'level10_liberty2_secured': {
-        narrator: "Pe absorve o Vórtice da Liberdade 2. O Sapo que Lava Dinheiro tem sua voz abafada e desaparece, neutralizado pela ética inegável das Liberdades reunidas. **Liberdade 2 Recuperada!**",
+        narrator: "Pe absorve o Vórtice da Liberdade 2. O Sapo que Lava Dinheiro tem sua voz abafada e desaparece, neutralizado pela ética inegável das Liberdades reunidas. Liberdade 2 Recuperada!",
         dialogue: "Quase… Eu lembro de uma luta no Datacenter... A chave está lá!",
         character: 'girl',
         options: [{ text: "Avançar para o Nível 11", next: 'level11_start' }]

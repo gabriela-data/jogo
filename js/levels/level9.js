@@ -34,7 +34,7 @@ export const level9 = {
     },
     'level9_pe_liberty3_win': {
         narrator: "Pe sorri vitoriosa.",
-        dialogue: "Ou… qualquer um pode melhorar. É por isso que existe a **Liberdade 3**: para corrigir falhas, aprimorar, proteger. O código livre se corrige em comunidade.",
+        dialogue: "Ou… qualquer um pode melhorar. É por isso que existe a Liberdade 3: para corrigir falhas, aprimorar, proteger. O código livre se corrige em comunidade.",
         character: 'pe',
         options: [{ text: "O Sapo Foge", next: 'level9_sapo_flee' }]
     },
@@ -46,7 +46,7 @@ export const level9 = {
     },
     'level9_liberty3_secured': {
         narrator: "A comunidade comemora a restauração da soberania. Um bloco de código dourado emerge do iVault abandonado e se insere no bracelete de Pe.",
-        dialogue: "Pe, você conseguiu! Eles viram a verdade. Recuperamos a **Liberdade 3**! Mas o Sapo ainda vai tentar corromper a ideia de compartilhamento…",
+        dialogue: "Pe, você conseguiu! Eles viram a verdade. Recuperamos a Liberdade 3! Mas o Sapo ainda vai tentar corromper a ideia de compartilhamento…",
         character: 'girl',
         options: [{ text: "Preparar-se para o Nível 10", next: 'level10_start' }]
     }

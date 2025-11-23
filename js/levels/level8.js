@@ -26,7 +26,7 @@ export const level8 = {
     },
     'level8_pe_analysis': {
         narrator: null,
-        dialogue: "O Sapo está atacando as **Liberdades 2** (distribuir cópias) e **3** (melhorar o programa) de uma vez! Ele quer que a comunidade desista da soberania em troca da conveniência.",
+        dialogue: "O Sapo está atacando as Liberdades 2 (distribuir cópias) e 3 (melhorar o programa) de uma vez! Ele quer que a comunidade desista da soberania em troca da conveniência.",
         character: 'pe',
         options: [{ text: "A Menina reforça a autonomia", next: 'level8_girl_autonomy' }]
     },

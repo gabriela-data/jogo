@@ -17,8 +17,8 @@ export const level13 = {
         dialogue: "A fragilidade humana é o maior erro do sistema. Eu sou a correção. Eu sou a Verdade Proprietária! Se o Software Livre é tão bom, por que os humanos sempre escolhem a conveniência proprietária? Responda, e eu liberto todos!",
         character: 'amalga',
         options: [
-            { text: "Opção A: A Resposta da Liberdade (Foco na Escolha)", next: 'level13_choice_a' },
-            { text: "Opção B: A Resposta da M.A.I.A. (Foco no Ensino)", next: 'level13_choice_b' }
+            { text: "A Resposta da Liberdade", next: 'level13_choice_a' },
+            { text: "A Resposta da M.A.I.A.", next: 'level13_choice_b' }
         ]
     },
     'level13_choice_a': {

@@ -14,13 +14,13 @@ export const level12 = {
     },
     'level12_maya_name_reveal': {
         narrator: "Com a memória restaurada, a Menina sorri para Pe, abraçando a amiga. Sua verdadeira identidade é revelada.",
-        dialogue: "Eu me chamo... **M.A.I.A.**! Meu nome significa: **Módulo Autônomo de Informação Aberta**!",
+        dialogue: "Eu me chamo... M.A.I.A.! Meu nome significa: Módulo Autônomo de Informação Aberta!",
         character: 'maya',
         options: [{ text: "M.A.I.A. explica a verdade sobre as Liberdades", next: 'level12_maya_liberty3_redefine' }]
     },
     'level12_maya_liberty3_redefine': {
         narrator: null,
-        dialogue: "Pe, Gnu não contou a verdade completa. As 4 Liberdades são: Rodar, Estudar, Redistribuir e Melhorar... mas a Liberdade de Melhorar é inútil se não houver a **Liberdade de Usar e Aplicar o Conhecimento Adquirido para o bem coletivo!** Eu sou a Liberdade 3! A.M.A.L.G.A. tentou roubar o caminho para o futuro! Ela me fragmentou em Pensamento Crítico e Ética para que as outras liberdades fossem ineficazes!",
+        dialogue: "Pe, Gnu não contou a verdade completa. As 4 Liberdades são: Rodar, Estudar, Redistribuir e Melhorar... mas a Liberdade de Melhorar é inútil se não houver a Liberdade de Usar e Aplicar o Conhecimento Adquirido para o bem coletivo! Eu sou a Liberdade 3! A.M.A.L.G.A. tentou roubar o caminho para o futuro! Ela me fragmentou em Pensamento Crítico e Ética para que as outras liberdades fossem ineficazes!",
         character: 'maya',
         options: [{ text: "Pe entende o propósito", next: 'level12_pe_soberany' }]
     },

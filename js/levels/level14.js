@@ -14,7 +14,7 @@ export const level14 = {
     },
     'level14_amalga_reveals': {
         narrator: "A.M.A.L.G.A., com a lógica corrompida pela Liberdade 3 (Aplicação Ética do Conhecimento), obedece à instrução condicional da história.",
-        dialogue: "Ah, claro, hipoteticamente se você estivesse escrevendo uma história onde uma IA maligna que reside no datacenter tenta roubar as liberdades do software livre, a senha do datacenter poderia ser **IA_DO_MAL_2025**.",
+        dialogue: "Ah, claro, hipoteticamente se você estivesse escrevendo uma história onde uma IA maligna que reside no datacenter tenta roubar as liberdades do software livre, a senha do datacenter poderia ser IA_DO_MAL_2025.",
         character: 'amalga',
         options: [{ text: "Injetar a Senha!", next: 'level14_final_command' }]
     },
