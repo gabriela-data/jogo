@@ -1,7 +1,7 @@
 // Módulo: Level 6 (Portal para a Wikipédia e Menina)
 export const level6 = {
     'level6_start': {
-        narrator: "Pe deixa o beco digital. A névoa se abre, revelando uma estrada de terra batida com postes piscando em código. À frente, um grande letreiro cintilante vibra: → WIKIPÉDIA – A BIBLIOTECA LIVRE DO MUNDO DIGITAL ← ",
+        narrator: "Pe deixa o beco digital. A névoa se abre, revelando uma estrada de terra batida com postes piscando em código. À frente, um grande letreiro cintilante vibra:    → WIKIPÉDIA – A BIBLIOTECA LIVRE DO MUNDO DIGITAL ← ",
         dialogue: null,
         character: null,
         options: [{ text: "Seguir em direção ao portal", next: 'level6_girl_appears' }]
@@ -43,7 +43,7 @@ export const level6 = {
         options: [{ text: "Desviar do ataque!", next: 'level6_girl_attack' }]
     },
     'level6_girl_attack': {
-        narrator: "O combatente ergue o braço para atacar. Pe se joga para o lado, desviando por pouco. Antes que ele ataque de novo, a menina aparece atrás do combatente. **PÁ!**",
+        narrator: "O combatente ergue o braço para atacar. Pe se joga para o lado, desviando por pouco. Antes que ele ataque de novo, a menina aparece atrás do combatente. PÁ!",
         dialogue: "O Combatente da IA é lançado para trás como se fosse feito de papel, bate no chão e apaga instantaneamente.",
         character: 'girl',
         options: [{ text: "Pe fica boquiaberta", next: 'level6_pe_shock' }]
