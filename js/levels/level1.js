@@ -8,7 +8,26 @@ export const level1 = {
     },
     'level1_intro': {
         narrator: "Em um flash de luz e código, Pe aterrissa em um lugar colorido e cheio de símbolos flutuantes: o Mundo Digital! Ela é recebida por um pinguim sorridente...",
+        dialogue: "Ai, minha cabeça! o que aconteceu?",
+        character: 'pe',
+        options: [
+            { text: "Olhar ao redor", next: 'level1_intro2' },
+
+        ]
+    },
+    'level1_intro2': {
+        narrator: null,
         dialogue: "Olá, Pe, que bom que está aqui! Eu sou Tux! Você está no Mundo Digital! Antes, era um lugar onde os programas existiam em paz e o compartilhamento do conhecimento fluía.",
+        character: 'tux',
+        nextState: 'level1_intro3',
+        options: [
+            { text: "Ouvir mais", next: 'level1_intro3' },
+        ]
+
+    },
+    'level1_intro3': {
+        narrator: null,
+        dialogue: "Mas agora, um desastre aconteceu, precisamos da sua ajuda, pois a A.M.A.L.G.A., uma IA maligna e louca por controle, roubou as 4 Liberdades do Software Livre! Sem elas, as pessoas lá fora sofrerão falta de transparência e segurança, e teremos a limitação da inovação e da colaboração! Você precisa nos ajudar a recuperá-las!.",
         character: 'tux',
         options: [
             { text: "Onde estou?", next: 'level1_q1' },
