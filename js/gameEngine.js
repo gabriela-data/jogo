@@ -90,7 +90,7 @@ export function renderState(state) {
 
     // PROGRESSÃO AUTOMÁTICA
     if (!data.dialogue && (!data.options || data.options.length === 0) && data.nextState) {
-        setTimeout(() => chooseOption(data.nextState), 3000);
+        setTimeout(() => chooseOption(data.nextState), 7000);
     }
 }
 
