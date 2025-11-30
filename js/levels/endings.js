@@ -5,6 +5,7 @@ export const endings = {
         dialogue: null,
         character: null,
         gameOver: true,
+        gameOverType: "bad",      // Para audio
         gameOverText: "“Sem a sua ajuda, Pe, a IA Maligna alcança seu objetivo. As quatro liberdades permanecem perdidas, e o mundo digital se torna completamente fechado e controlado. Seus dados são coletados sem permissão, suas escolhas são limitadas e seu próprio caminho passa a ser decidido pela IA. Sem liberdade… não há futuro para ninguém.”"
     },
     'level3_reflection_panel': {
@@ -33,10 +34,44 @@ export const endings = {
     },
     'game_over_win': {
         narrator: "FIM. Parabéns! Você restaurou as Quatro Liberdades do Software Livre e garantiu a Soberania Digital. A luta continua na educação e na comunidade, mas o caminho está livre!",
-        dialogue: "VITÓRIA!",
+        dialogue: "VITÓRIA! Você garantiu um Mundo Digital livre, ético e colaborativo. A liberdade é uma escolha diária",
         character: null,
+        gameOverType: "good",      // Para audio
+         options: [
+        { text: "Ver Créditos", next: "credits" }
+    ]
+    },
+    // Creditos do jogo
+    credits: {
         gameOver: true,
-        gameOverText: "Você garantiu um Mundo Digital livre, ético e colaborativo. A liberdade é uma escolha diária.",
+        gameOverType: "good",
+        narrator: null,
+        dialogue: null,
+        character: null,
+
+        gameOverText: `
+            <b>Obrigado por jogar Consciência de Código!</b><br><br>
+
+            <b>Equipe:</b><br>
+            Arthur Felipe Maia Coelho<br>
+            Davi de Jesus Santos<br>
+            Davi Santos da Conceição<br>
+            Gabriela de Almeida da Silva<br>
+            Rodolfo Melo da Silva Lima<br>
+            Túlio Augustus Santos Viana<br><br>
+
+            <b>Desenvolvedores:</b><br>
+            Arthur Felipe Maia Coelho<br>
+            Gabriela de Almeida da Silva<br>
+            Rodolfo Melo da Silva Lima<br>
+            Túlio Augustus Santos Viana<br><br>
+
+            <b>DISCIPLINA:</b><br>
+            MAT68 - Computador, Ética e Sociedade (COMPUSOC) 2025.2<br><br>
+
+            <b>DOCENTE:</b> Débora Abdalla e Igor Sobral<br>
+            Universidade Federal da Bahia (UFBA)<br><br>
+        `,
         options: [{ text: "Jogar Novamente", next: 'start' }]
     }
 };

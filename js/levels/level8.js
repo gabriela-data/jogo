@@ -14,7 +14,7 @@ export const level8 = {
     },
     'level8_sapo_pitch_2': {
         narrator: "Ele aponta para um canteiro de obras ao lado, onde robôs com o logo da A.M.A.L.G.A. estão descarregando componentes fechados.",
-        dialogue: "Mas eu tenho a solução para a sua dor de cabeça digital! Estou construindo o iVault – um repositório fechado, rápido e totalmente gerenciado. É proprietário, claro, mas vocês não precisam mais modificar nada!",
+        dialogue: "Mas eu tenho a solução para a sua dor de cabeça digital! Estou construindo o iVault– um repositório fechado, rápido e totalmente gerenciado. É proprietário, claro, mas vocês não precisam mais modificar nada!",
         character: 'sapo',
         options: [{ text: "Ouvir a proposta de centralização", next: 'level8_sapo_nuvem' }]
     },

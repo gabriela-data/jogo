@@ -146,11 +146,13 @@ button:hover {
     color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Evita amassar o topo */
     align-items: center;
     text-align: center;
     padding: 20px;
     z-index: 10;
+    overflow-y: auto;   /* Permite rolagem */
+    overflow-x: hidden; /* Evita scroll horizontal */
 }
 
 #game-over-panel h2 {
@@ -160,9 +162,13 @@ button:hover {
 }
 
 #game-over-text {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-bottom: 30px;
     font-family: 'Permanent Marker', cursive;
+    max-width: 90%;
+    line-height: 1.4em;
+    word-wrap: break-word;
+    margin-bottom: 30px;
 }
 
 /* Utilidade */

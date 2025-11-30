@@ -23,8 +23,8 @@ export const level10 = {
         dialogue: "A Liberdade 2 está no fundo. Como vamos quebrar a barreira do Monopólio para alcançá-la?",
         character: 'pe',
         options: [
-            { text: "Opção A: Confiar na Força e Ética da Menina (M.A.I.A.)", next: 'level10_choice_a' },
-            { text: "Opção B: Construir Submarino com Código Aberto (Técnica)", next: 'level10_choice_b' }
+            { text: "Opção A: Confiar na Força e Ética da Menina", next: 'level10_choice_a' },
+            { text: "Opção B: Construir Submarino com Código Aberto", next: 'level10_choice_b' }
         ]
     },
     'level10_choice_a': {
