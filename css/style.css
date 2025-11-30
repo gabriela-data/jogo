@@ -7,7 +7,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #f0f0f0;
-    background-image: url('../assets/fundo1.png'); /* **MUDAR IMAGEM** - Coloque uma imagem de "Mundo Digital" em assets/ */
+    background-image: url('../assets/fundo1.webp'); /* **MUDAR IMAGEM** - Coloque uma imagem de "Mundo Digital" em assets/ */
     background-size: cover;
     background-position: center;
 }
